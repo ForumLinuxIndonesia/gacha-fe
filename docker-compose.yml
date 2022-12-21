@@ -1,6 +1,11 @@
 services:
   fe:
     image: "waxarsatia/gacha-fe:latest"
-    network_mode: bridge
     ports:
       - "5001:80"
+    restart: unless-stopped
+
+networks:
+  default:
+    name: "gacha"
+    external: true
