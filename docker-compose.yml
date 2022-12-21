@@ -1,6 +1,7 @@
 services:
-  landingpage:
-    pull_policy: "build"
+  fe:
     build: .
+    network_mode: bridge
     ports:
       - "5001:80"
+    pull_policy: "build"
