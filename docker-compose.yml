@@ -1,7 +1,6 @@
 services:
   fe:
-    build: .
+    image: "waxarsatia/gacha-fe:latest"
     network_mode: bridge
     ports:
       - "5001:80"
-    pull_policy: "build"
