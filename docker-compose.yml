@@ -1,11 +1,11 @@
 services:
-  fe:
-    image: "waxarsatia/gacha-fe:latest"
+  app:
+    image: "${DOCKER_USERNAME}/${DOCKER_IMAGE_NAME}:latest"
     ports:
-      - "5001:80"
+      - "${DOCKER_FORWARD_PORT}:${DOCKER_LISTEN_PORT}"
     restart: unless-stopped
 
 networks:
   default:
-    name: "gacha"
+    name: "${DOCKER_NETWORK}"
     external: true
