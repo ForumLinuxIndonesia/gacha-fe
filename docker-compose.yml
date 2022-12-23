@@ -1,5 +1,5 @@
 services:
-  app:
+  fe:
     image: "${DOCKER_USERNAME}/${DOCKER_IMAGE_NAME}:latest"
     ports:
       - "${DOCKER_FORWARD_PORT}:${DOCKER_LISTEN_PORT}"
