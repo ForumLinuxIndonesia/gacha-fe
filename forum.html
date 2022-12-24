@@ -23,7 +23,7 @@
     style="overflow: visible;">
     <div class="main">
         <!--Header-->
-        <header class="bg-transparent sticky-bar mt-4">
+        <header class="bg-transparent sticky-bar">
             <div class="container bg-transparent">
                 <nav class="bg-transparent flex justify-between items-center py-3">
                     <a class="text-3xl font-semibold leading-none" href="index.html">
@@ -229,20 +229,39 @@
                         <h5 class="pt-10 text-3xl font-semibold">
                             Forum List
                         </h5>
-                        <p>Cari banyak informasi tentang berbagai hal</p>
+                        <p class="mt-4">Cari banyak informasi tentang berbagai hal</p>
                     </div>
                     <div>
-                        <a href="" class="bg-blue-500 text-white py-2 px-4 rounded-md flex gap-1"><i
+                        <a href=""
+                            class="hidden md:block lg:block xl:block bg-blue-500 text-white py-2 px-4 rounded-md flex gap-1"><i
                                 class="ri-add-line"></i>
                             Posting Thread</a>
+                        <a href=""
+                            class="block md:hidden lg:hidden xl:hidden bg-blue-500 text-white py-2 px-4 rounded-md flex gap-1"><i
+                                class="ri-add-line"></i>
+                            Posting</a>
                     </div>
                 </div>
-                <div class="md:w-3/12 mt-5">
+                <div class="block md:flex lg:flex xl:flex mt-5 gap-2">
                     <div class="relative flex items-center">
                         <select
-                            class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded"
+                            class="block appearance-none w-full md:w-48 lg:w-48 xl:w-48 bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded"
                             id="grid-state">
                             <option>Paling Baru</option>
+                            <option>Paling Lama</option>
+                        </select>
+                        <div
+                            class="pointer-events-none absolute right-0 pin-y pin-r flex items-center px-2 text-grey-darker">
+                            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center mt-2 md:mt-0 lg:mt-0 xl:mt-0">
+                        <select
+                            class="block appearance-none w-full md:w-64 lg:w-64 xl:w-64 bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded"
+                            id="grid-state">
+                            <option>Web Development</option>
                             <option>Paling Lama</option>
                         </select>
                         <div
